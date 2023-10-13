@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    setlocale(0, "");
+    int height;
+
+    cout << "Введите высоту: ";
+    cin >> height;
+
+    cout << "Трапеция:" << endl;
+    for (int i = 1; i <= height + 1; i++) {
+        for (int j = 0; j <= height - i; j++) {
+            cout << " ";
+        }
+        for (int j = height - 3 * i; j <= height; j++) {
+            cout << "*";
+        }
+        cout << endl;
+    }
+
+    cout << "Квадрат:" << endl;
+    for (int i = 1; i <= height; i++) {
+        for (int j = 1; j <= height; j++) {
+            cout << " * ";
+        }
+        cout << endl;
+    }
+
+    return 0;
+}
